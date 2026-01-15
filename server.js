@@ -32,7 +32,8 @@ app.post('/api/recommendations', async (req, res) => {
         if (drivingStyle === 'Family') persona = 'Safety First';
         if (drivingStyle === 'Performance') persona = 'Enthusiast';
 
-        console.log(`[Super-Brain] Analyzing for Persona: ${persona}`);
+       const PORT = process.env.PORT || 8080;
+app.listen(PORT, '0.0.0.0', () =>
 
         let query = `
             SELECT 
